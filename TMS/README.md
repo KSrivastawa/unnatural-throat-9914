@@ -78,66 +78,9 @@ JDBC with DAO pattern
 	  | vendor_tender                      |
 	  +------------------------------------+
  
- 
- > desc administrator;
-+----------+-------------+------+-----+---------+-------+
-| Field    | Type        | Null | Key | Default | Extra |
-+----------+-------------+------+-----+---------+-------+
-| id       | int         | NO   | PRI | NULL    |       |
-| name     | varchar(20) | YES  |     | NULL    |       |
-| dob      | date        | YES  |     | NULL    |       |
-| email    | varchar(20) | YES  | UNI | NULL    |       |
-| password | varchar(15) | YES  |     | NULL    |       |
-+----------+-------------+------+-----+---------+-------+
- 
- 
- > desc vendor;
-+--------------+-------------+------+-----+---------+----------------+
-| Field        | Type        | Null | Key | Default | Extra          |
-+--------------+-------------+------+-----+---------+----------------+
-| id           | int         | NO   | PRI | NULL    | auto_increment |
-| vname        | varchar(20) | YES  |     | NULL    |                |
-| GST_no       | int         | YES  | UNI | NULL    |                |
-| edate        | date        | YES  |     | NULL    |                |
-| email        | varchar(20) | YES  | UNI | NULL    |                |
-| password     | varchar(15) | YES  |     | NULL    |                |
-| signature_id | int         | YES  | MUL | NULL    |                |
-+--------------+-------------+------+-----+---------+----------------+
- 
- 
- > desc tenders;
-+------------+-------------+------+-----+---------+-------+
-| Field      | Type        | Null | Key | Default | Extra |
-+------------+-------------+------+-----+---------+-------+
-| tender_Id  | int         | NO   | PRI | NULL    |       |
-| flat_type  | varchar(20) | YES  |     | NULL    |       |
-| base_price | int         | YES  |     | NULL    |       |
-| furniture  | varchar(20) | YES  |     | NULL    |       |
-| location   | varchar(20) | YES  |     | NULL    |       |
-| s_date     | date        | YES  |     | NULL    |       |
-| e_date     | date        | YES  |     | NULL    |       |
-+------------+-------------+------+-----+---------+-------+
- 
- 
-> desc bids;
-+---------------+-------------+------+-----+---------+----------------+
-| Field         | Type        | Null | Key | Default | Extra          |
-+---------------+-------------+------+-----+---------+----------------+
-| bid_no        | int         | NO   | PRI | NULL    | auto_increment |
-| offer_price   | int         | YES  |     | NULL    |                |
-| bid_tender    | int         | YES  | MUL | NULL    |                |
-| vendor_id     | int         | YES  | MUL | NULL    |                |
-| status_of_bid | varchar(15) | YES  |     | NULL    |                |
-+---------------+-------------+------+-----+---------+----------------+
+ ![tdm_dbt1](https://user-images.githubusercontent.com/103960690/199557981-e2607cd2-02f3-47f8-ba9a-cea8039d6365.png)
 
-> desc vendor_tender;
-+-----------------------+------+------+-----+---------+-------+
-| Field                 | Type | Null | Key | Default | Extra |
-+-----------------------+------+------+-----+---------+-------+
-| id                    | int  | YES  | MUL | NULL    |       |
-| tender_Id             | int  | YES  | MUL | NULL    |       |
-| highest_offered_price | int  | YES  |     | NULL    |       |
-+-----------------------+------+------+-----+---------+-------+
+![tms_dbt2](https://user-images.githubusercontent.com/103960690/199557907-785a95f8-a9cf-4911-b383-2973fa716a7c.png)
 
 
 Thank You ! 
